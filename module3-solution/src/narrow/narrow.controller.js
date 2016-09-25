@@ -35,8 +35,8 @@ function NarrowItDownController($rootScope, MenuSearchService) {
     });
   };
 
-  vm.removeItem = function (itemIndex) {
-    MenuSearchService.removeItem(itemIndex);
+  vm.removeItem = function (itemId) {
+    MenuSearchService.removeItem(itemId);
   };
 }
 

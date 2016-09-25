@@ -17,6 +17,8 @@ FoundItemsComponentController.$inject = ['$rootScope', '$element', '$q']
 function FoundItemsComponentController($rootScope, $element, $q) {
   var vm = this;
 
+  vm.order = "short_name";
+
   vm.$doCheck = function () {
     var warningElem = $element.find('div.alert');
     if (vm.isEmpty) {
@@ -26,8 +28,8 @@ function FoundItemsComponentController($rootScope, $element, $q) {
     }
   };
 
-  vm.remove = function (myIndex) {
-    vm.onRemove({ index: myIndex });
+  vm.remove = function (id) {
+    vm.onRemove({ itemId: id });
   };
 }
 

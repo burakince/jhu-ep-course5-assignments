@@ -48,8 +48,13 @@ function MenuSearchService($q, $http, ApiBasePath) {
     return deferred.promise;
   };
 
-  vm.removeItem = function (itemIndex) {
-    vm.result.foundItems.splice(itemIndex, 1);
+  vm.removeItem = function (itemId) {
+    for (var i = vm.result.foundItems.length; i--;) {
+      if (vm.result.foundItems[i].id === itemId) {
+        vm.result.foundItems.splice(i, 1);
+      }
+    };
+    // vm.result.foundItems.splice(vm.result.foundItems["id"][itemIndex], 1);
   }
 }
 
