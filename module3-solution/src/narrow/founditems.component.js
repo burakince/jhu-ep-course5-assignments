@@ -18,6 +18,12 @@ function FoundItemsComponentController($rootScope, $element, $q) {
   var vm = this;
 
   vm.order = "short_name";
+  vm.reverse = false;
+
+  vm.sortBy = function(order) {
+    vm.reverse = (vm.order === order) ? !vm.reverse : false;
+    vm.order = order;
+  };
 
   vm.$doCheck = function () {
     var warningElem = $element.find('div.alert');
