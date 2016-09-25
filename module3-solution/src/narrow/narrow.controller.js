@@ -12,6 +12,12 @@ function NarrowItDownController($rootScope, MenuSearchService) {
 
   vm.isEmpty = false;
 
+  vm.searchByKey = function(keyEvent) {
+    if (keyEvent.which === 13) {
+      vm.search();
+    };
+  };
+
   vm.search = function() {
     $rootScope.$broadcast('founditems:processing', {on: true});
 

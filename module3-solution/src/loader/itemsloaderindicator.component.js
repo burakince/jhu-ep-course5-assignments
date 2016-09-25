@@ -8,13 +8,24 @@ angular.module('ItemsLoaderIndicatorApp')
 });
 
 
-ItemsLoaderIndicatorController.$inject = ['$rootScope']
-function ItemsLoaderIndicatorController($rootScope) {
+ItemsLoaderIndicatorController.$inject = ['$rootScope', '$element']
+function ItemsLoaderIndicatorController($rootScope, $element) {
   var vm = this;
 
   var cancelListener = $rootScope.$on('founditems:processing', function (event, data) {
+    console.log("Data: ", data.on);
+
     vm.showLoader = data.on;
   });
+
+  vm.$doCheck = function () {
+    var loaderElem = $element.find('div.loader');
+    if (vm.showLoader) {
+      loaderElem.css('display', 'block');
+    } else {
+      loaderElem.css('display', 'none');
+    }
+  };
 
   vm.$onDestroy = function () {
     cancelListener();
