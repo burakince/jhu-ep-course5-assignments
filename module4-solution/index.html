@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chinese Restaurant Menu List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body ng-app="MenuApp">
+  <div class="container">
+    <h1>Welcome to Chinese Restaurant Menu List</h1>
+
+    <items-loader-indicator></items-loader-indicator>
+
+    <ui-view></ui-view>
+
+  </div>
+
+  <!-- Libraries -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+  <!-- Modules -->
+  <script src="src/data/data.module.js"></script>
+  <script src="src/menuapp/menuapp.module.js"></script>
+  <script src="src/loader/itemsloaderindicator.module.js"></script>
+
+  <!-- Routes -->
+  <script src="src/menuapp/router.js"></script>
+
+  <!-- 'MenuApp' module artifacts -->
+  <script src="src/menuapp/categories.controller.js"></script>
+  <script src="src/menuapp/categories.component.js"></script>
+  <script src="src/menuapp/items.controller.js"></script>
+  <script src="src/menuapp/items.component.js"></script>
+
+  <!-- 'Data' module artifacts -->
+  <script src="src/data/menudata.service.js"></script>
+
+  <!-- 'ItemsLoaderIndicatorApp' module artifacts -->
+  <script src="src/loader/itemsloaderindicator.component.js"></script>
+
+</body>
+</html>
