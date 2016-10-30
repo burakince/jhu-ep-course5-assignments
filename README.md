@@ -10,3 +10,5 @@ Module 2 Links: [https://burakince.github.io/jhu-ep-course5-assignments/module2-
 Module 3 Links: [https://burakince.github.io/jhu-ep-course5-assignments/module3-solution/](https://burakince.github.io/jhu-ep-course5-assignments/module3-solution/) or [http://www.burakince.net/jhu-ep-course5-assignments/module3-solution/](http://www.burakince.net/jhu-ep-course5-assignments/module3-solution/)
 
 Module 4 Links: [https://burakince.github.io/jhu-ep-course5-assignments/module4-solution/](https://burakince.github.io/jhu-ep-course5-assignments/module4-solution/) or [http://www.burakince.net/jhu-ep-course5-assignments/module4-solution/](http://www.burakince.net/jhu-ep-course5-assignments/module4-solution/)
+
+Module 5 Links: [https://burakince.github.io/jhu-ep-course5-assignments/module5-solution/](https://burakince.github.io/jhu-ep-course5-assignments/module5-solution/) or [http://www.burakince.net/jhu-ep-course5-assignments/module5-solution/](http://www.burakince.net/jhu-ep-course5-assignments/module5-solution/)

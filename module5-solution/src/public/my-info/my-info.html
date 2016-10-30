@@ -1,0 +1,47 @@
+<div class="container">
+  <div ng-if="myInfoCtrl.user">
+    <div id="userinformation" class="row">
+        <h1 class="text-center">My Registered Informations</h1>
+
+        <div class="text-right col-xs-5">First name:</div>
+        <div class="col-xs-7">{{ myInfoCtrl.user.firstname}}</div>
+
+        <div class="text-right col-xs-5">Last name:</div>
+        <div class="col-xs-7">{{ myInfoCtrl.user.lastname}}</div>
+
+        <div class="text-right col-xs-5">Email:</div>
+        <div class="col-xs-7">{{ myInfoCtrl.user.email}}</div>
+
+        <div class="text-right col-xs-5" ng-if="myInfoCtrl.user.phone">Phone:</div>
+        <div class="col-xs-7" ng-if="myInfoCtrl.user.phone">{{ myInfoCtrl.user.phone }}</div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="menu-item-photo">
+          <div>{{myInfoCtrl.user.favoritedish.short_name}}</div>
+          <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.user.favoritedish.short_name}}.jpg" alt="{{myInfoCtrl.user.favoritedish.name}}">
+        </div>
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{myInfoCtrl.user.favoritedish.name}}</h3>
+        <p class="menu-item-details">{{myInfoCtrl.user.favoritedish.description}}</p>
+        <div class="menu-item-price">
+          {{myInfoCtrl.user.favoritedish.price_small | currency}}
+          <span>
+            {{myInfoCtrl.user.favoritedish.small_portion_name}}
+          </span>
+
+          {{myInfoCtrl.user.favoritedish.price_large | currency}}
+          <span>
+            {{myInfoCtrl.user.favoritedish.large_portion_name}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="notsignup" class="text-center" ng-if="!myInfoCtrl.user">
+    Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+  </div>
+
+</div>
